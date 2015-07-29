@@ -8,4 +8,9 @@ class UsersControllerTest < ActionController::TestCase
     assert_select 'title', "Sign up | Ruby on Rails Tutorial Sample App"
   end
 
+  test "should get a user" do
+
+    get :edit
+    assert_select @user.count, 1
+  end
 end
